@@ -1,0 +1,26 @@
+.setuser__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.setuser__wrapper h1{
+  width: 80%;
+  margin: 0;
+}
+
+.setuser__wrapper form{
+  width: 80%;
+  margin-top: 32px;
+}
+
+.setuser__wrapper input{
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  padding: 12px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
