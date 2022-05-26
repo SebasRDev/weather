@@ -1,6 +1,7 @@
 import { useEffect, useReducer } from "react";
 import { AuthContext } from "./auth/authContext";
 import { authReducer } from "./auth/authReducer";
+import { Home } from "./components/Home";
 import { SetUser } from "./components/SetUser";
 
 const init = ()=>{
@@ -10,7 +11,6 @@ const init = ()=>{
 
 function App() {
   const [user, dispatch] = useReducer(authReducer, {}, init)
-  console.log(user)
 
   useEffect(() => {
     if(!user) return;
@@ -28,7 +28,7 @@ function App() {
       >
         {!user
           ? <SetUser />
-          : <h1>Weather App</h1>
+          : <Home />
         }
       </AuthContext.Provider>
     </div>

@@ -10,17 +10,15 @@ export const SetUser = () => {
   const handleUser = (e) => {
     setUser(e.target.value)
   }
-
+  
   const handleSaveUser = (e) => {
     e.preventDefault();
     dispatch({
       type: Types.login,
       payload: {
-        user
+        user: user
       }
     })
-    // localStorage.setItem('user', user)
-    
   }
 
   return (
