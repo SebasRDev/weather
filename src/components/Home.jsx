@@ -28,29 +28,33 @@ export const Home = () => {
   return (
     <>
       <div className='searcher'>
-        <h1>Hi {username}</h1>
-        <h2>Check the weather by city</h2>
-        <form onSubmit={handleSearchCity}>
-          <input
-            type="text"
-            placeholder='Search City'
-            value={city}
-            onChange={handleCity}
-          />
-        </form>
+        <div className="container">
+          <h1>Hi {username}</h1>
+          <h2>Check the weather by city</h2>
+          <form onSubmit={handleSearchCity}>
+            <input
+              type="text"
+              placeholder='Search City'
+              value={city}
+              onChange={handleCity}
+            />
+          </form>
+        </div>
       </div>
       <div className='gallery__wrapper'>
-        <h2>My recent searches</h2>
-        <div className='gallery'>
-          {
-            recentSearches.map((city,index) => {
-              return(
-                <div key={index} className="recent__city">
-                  {city}
-                </div>
-              )
-            })
-          }
+        <div className="container">
+          <h2>My recent searches</h2>
+          <div className='gallery'>
+            {
+              recentSearches.map((city,index) => {
+                return(
+                  <div key={index} className="recent__city">
+                    {city}
+                  </div>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </>
