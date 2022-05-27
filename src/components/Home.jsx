@@ -45,6 +45,7 @@ export const Home = () => {
         <div className="container">
           <h2>My recent searches</h2>
           <div className='gallery'>
+            {recentSearches.length === 0 && <p>you dont have recent searches</p>}
             {
               recentSearches.map((city,index) => {
                 return(
